@@ -63,7 +63,7 @@ img{
     align-items: center;
     justify-content: space-between;
     margin: 20px;
-    transition: all 0.3s ease-in-out;
+    transition: all 1s ease;
 }
 
 button{

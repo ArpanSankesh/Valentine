@@ -24,7 +24,7 @@ let changeImg = () => {
     noBtn.innerHTML = `${messages[index]}`
     index = (index + 1) % images.length
 
-    scaleFactor += 0.2
+    scaleFactor += 0.3
     yesBtn.style.transform = `scale(${scaleFactor})`;
     console.log(scaleFactor);
     
