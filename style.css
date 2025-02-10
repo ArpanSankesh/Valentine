@@ -83,3 +83,33 @@ button:first-child{
 button:nth-child(2){
     background-color: #FF4C4F;
 }
+
+
+
+/* 🟢 Responsive Adjustments */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .img-div {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .question h1{
+        font-size: 5vw;
+    }
+
+    .button-div {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 80%;
+        font-size: 4vw;
+    }
+  
+}
