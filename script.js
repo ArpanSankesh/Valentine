@@ -5,11 +5,11 @@ let txt = document.querySelector('.question h1')
 let buttons = document.querySelector('.button-div')
 
 let images = [
-    "assets/SadPikachu1.webp",
-    "assets/SadPikachu2.webp",
-    "assets/SadPikachu3.webp",
-    "assets/SadPikachu4.webp",
-    "assets/SadPikachu5.webp",
+    "assets/SadPikachu1.jpg",
+    "assets/SadPikachu2.jpg",
+    "assets/SadPikachu3.jpg",
+    "assets/SadPikachu4.jpg",
+    "assets/SadPikachu5.jpg",
 ];
 const messages = ["really?", "pookie please", "are you sure?", "Last chance!", "Think again"];
 
