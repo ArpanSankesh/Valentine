@@ -12,6 +12,7 @@ let images = [
     "assets/SadPikachu5.jpg",
 ];
 const messages = ["really?", "pookie please", "are you sure?", "Last chance!", "Think again"];
+const yesMessages = ["common", "Say Yes", "SAYY YESSSS", "Why it's hard ? SAY YES", "JUST SAYYYYYY YESSSSS !!!"];
 
 
 let index = 0 
@@ -22,6 +23,7 @@ let changeImg = () => {
     index = (index + 1) % images.length
 
     noBtn.innerHTML = `${messages[index]}`
+    yesBtn.innerHTML = `${yesMessages[index]}`
     index = (index + 1) % images.length
 
     scaleFactor += 0.3
