@@ -12,12 +12,33 @@ let images = [
     "assets/SadPikachu5.jpg",
 ];
 const messages = ["really?", "pookie please", "are you sure?", "Last chance!", "Think again"];
-const yesMessages = ["common", "Say Yes", "SAYY YESSSS", "Why it's hard ? SAY YES", "JUST SAYYYYYY YESSSSS !!!"];
+const yesMessages = ["Come On", "Say Yes", "SAYY YESS" , "SAYYY YESSS", "SAYYYY YESSSS"];
+
+window.addEventListener('beforeunload', function (e) {
+    e.preventDefault();
+    e.returnValue = '';  // This triggers the "Are you sure?" prompt
+});
+
+// Function to make the page go fullscreen
+function goFullScreen() {
+    let elem = document.documentElement;
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { // Firefox
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+        elem.msRequestFullscreen();
+    }
+}
 
 
 let index = 0 
 let scaleFactor = 1
 let changeImg = () => {
+
+    goFullScreen();
     
     img.src = images[index]
     index = (index + 1) % images.length
@@ -26,15 +47,16 @@ let changeImg = () => {
     yesBtn.innerHTML = `${yesMessages[index]}`
     index = (index + 1) % images.length
 
-    scaleFactor += 0.3
+    scaleFactor += 0.2
     yesBtn.style.transform = `scale(${scaleFactor})`;
     console.log(scaleFactor);
     
 }
 
 let congrats = () => {
+    window.removeEventListener('beforeunload', () => {});
     buttons.style.display = 'none'
-    txt.innerHTML = "Yeahhh... Thank you :)"
+    txt.innerHTML = "Pika Pika! You made Pikachu happy! 💖"
     img.src = 'assets/happyPika.webp'
 }
 
